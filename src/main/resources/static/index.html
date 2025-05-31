@@ -174,23 +174,29 @@
 </script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-      const images = ["pose.jpg", "sleeping.jpg", "grace.jpeg", "hair.jpeg", "pa.jpg"]; // replace with your images
+      const images = ["pose.jpg", "sleeping.jpg", "grace.jpeg", "hair.jpeg", "pa.jpg"];
       let currentIndex = 0;
       const galleryImg = document.querySelector(".gallery-img");
       const prevBtn = document.querySelector(".prev");
       const nextBtn = document.querySelector(".next");
 
+      function updateImage() {
+        console.log("Switching to image:", images[currentIndex]);
+        galleryImg.src = images[currentIndex];
+      }
+
       prevBtn.onclick = function() {
         currentIndex = (currentIndex - 1 + images.length) % images.length;
-        galleryImg.src = images[currentIndex];
+        updateImage();
       };
 
       nextBtn.onclick = function() {
         currentIndex = (currentIndex + 1) % images.length;
-        galleryImg.src = images[currentIndex];
+        updateImage();
       };
     });
 </script>
+
 
 </body>
 </html>
