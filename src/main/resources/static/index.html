@@ -6,8 +6,8 @@
     <title>The Book of Jonukkah: A Tale of Divine Mischief</title>
     <style>
         body {
-          background-color: #fdf6e3;
-          font-family: 'Georgia', serif;
+          background-color: #f9f9f9;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
           color: #333;
           line-height: 1.6;
           margin: 0;
@@ -15,34 +15,75 @@
           text-align: center;
         }
         h1 {
-          color: #b5651d;
+          color: #111;
           margin-top: 30px;
+          font-weight: 500;
+          font-size: 1.8rem;
         }
         img {
-          border-radius: 10px;
+          border-radius: 12px;
           margin: 20px 0;
-          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+          width: 300px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         .content {
           max-width: 700px;
           margin: 0 auto;
           padding: 20px;
           text-align: left;
+          font-size: 1rem;
         }
         p {
-          margin-bottom: 1em;
+          margin-bottom: 1.2em;
         }
         footer {
           margin-top: 30px;
           font-style: italic;
-          color: #888;
+          color: #aaa;
+          font-size: 0.9rem;
+        }
+        /* Age Verification Modal Styling */
+        #ageModal {
+          position: fixed;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+          background: rgba(0,0,0,0.7);
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 9999;
+          flex-direction: column;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+          text-align: center;
+          padding: 20px;
+        }
+        #ageModal h2 {
+          margin-bottom: 20px;
+          font-weight: 500;
+          font-size: 1.3rem;
+        }
+        #ageModal button {
+          background: #fff;
+          color: #000;
+          border: none;
+          border-radius: 6px;
+          padding: 10px 20px;
+          font-size: 1rem;
+          margin: 0 10px;
+          cursor: pointer;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+          transition: background 0.3s, color 0.3s;
+        }
+        #ageModal button:hover {
+          background: #f0f0f0;
         }
     </style>
 </head>
 <body>
 
-<h1>The Book of Jonukkah: A Tale of Divine Mischief 🎉</h1>
-<img src="dad.jpg" alt="Dad's Photo" width="300" />
+<h1>The Book of Jonukkah: A Tale of Divine Mischief</h1>
+<img src="dad.jpg" alt="Dad's Photo" />
 
 <div class="content">
     <p>In the year of our fathers, 1972, in the humble lands of Ohio, a child was born unto the world. His name was John, and from the first wail of his lungs, the world knew that peace was not to be his path. For John was destined to be a rascal, a wanderer, and a bringer of both chaos and laughter.</p>
@@ -51,16 +92,41 @@
 
     <p>It was in the blessed halls of high school that John’s heart was captured by the radiant Jen. Their love was a spark that became a roaring flame, uniting them in holy mischief in 1993, thus establishing the First Covenant of Jonukkah.</p>
 
-    <p>John worked with the fervor of a thousand laborers — building, creating, and conquering. Whether laying down fairways as a gifted golfer, blazing trails as a mountain biker, or roaring through race tracks in a flash of chrome and dust, John was unstoppable. His hands built homes, and his spirit built memories.</p>
+    <p>John worked with the fervor of a thousand laborers — building, creating, and conquering. Before the age of fifty, John the Young became John the Retired, having wrestled the world into submission with his tradesman’s skill and boundless energy. In retirement, he became unstoppable — laying down fairways as a gifted golfer, blazing trails as a mountain biker, and roaring through race tracks in a flash of chrome and dust (much to Jen’s mild annoyance and endless amusement). His hands built homes, his spirit built memories, and his need for speed gave his dear wife fresh reasons to pray.</p>
 
-    <p>Before the age of fifty, John the Young became John the Retired, having wrestled the world into submission with his tradesman’s skill and boundless energy. But the greatest of his creations was his family — his son and daughter — who carried forward his love of wild adventure and heartfelt laughter.</p>
+    <p>But the greatest of his creations was his family — his son and daughter — who carried forward his love of wild adventure and heartfelt laughter.</p>
 
     <p>Thus, every June, we celebrate Jonukkah, a day of feasting, laughter, and wild tales, honoring the man who turned every day into an adventure and every moment into a lesson. Let this be our prayer: May the spirit of Jonukkah inspire us to work hard, play harder, and never lose the twinkle of mischief in our eyes.</p>
 </div>
 
 <h1>Amen. And Happy Jonukkah!</h1>
 
-<footer>© 2025 Jonukkah Festivities</footer>
+<footer>© 2025 Jonukkah Festivities, A Borchelt Product</footer>
+
+<!-- Age Verification Modal -->
+<div id="ageModal">
+    <h2>Warning: This content may be offensive. Wish you proceed?</h2>
+    <div>
+        <button id="yesBtn">Yes, I am nuttier than a Snickers.</button>
+        <button id="noBtn">No, but this button will let me in anyway.</button>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const modal = document.getElementById("ageModal");
+      const yesBtn = document.getElementById("yesBtn");
+      const noBtn = document.getElementById("noBtn");
+
+      yesBtn.onclick = function() {
+        modal.style.display = "none";
+      };
+      noBtn.onclick = function() {
+        alert("Alright, but don’t say we didn’t warn you! 😉");
+        modal.style.display = "none";
+      };
+    });
+</script>
 
 </body>
 </html>
